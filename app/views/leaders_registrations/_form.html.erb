@@ -1,0 +1,47 @@
+<%= form_with(model: leaders_registration) do |form| %>
+  <% if leaders_registration.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(leaders_registration.errors.count, "error") %> prohibited this leaders_registration from being saved:</h2>
+
+      <ul>
+        <% leaders_registration.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :birthdate, style: "display: block" %>
+    <%= form.date_field :birthdate %>
+  </div>
+
+  <div>
+    <%= form.label :disponibility, style: "display: block" %>
+    <%= form.text_field :disponibility %>
+  </div>
+
+  <div>
+    <%= form.label :is_teacher_too, style: "display: block" %>
+    <%= form.check_box :is_teacher_too %>
+  </div>
+
+  <div>
+    <%= form.label :is_assistant_too, style: "display: block" %>
+    <%= form.check_box :is_assistant_too %>
+  </div>
+
+  <div>
+    <%= form.label :class_by_age, style: "display: block" %>
+    <%= form.text_field :class_by_age %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

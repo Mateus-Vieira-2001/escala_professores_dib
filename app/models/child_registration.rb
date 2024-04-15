@@ -1,0 +1,2 @@
+class ChildRegistration < ApplicationRecord
+end

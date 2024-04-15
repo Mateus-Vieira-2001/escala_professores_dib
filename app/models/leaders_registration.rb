@@ -1,0 +1,2 @@
+class LeadersRegistration < ApplicationRecord
+end

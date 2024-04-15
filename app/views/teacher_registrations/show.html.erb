@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @teacher_registration %>
+
+<div>
+  <%= link_to "Edit this teacher registration", edit_teacher_registration_path(@teacher_registration) %> |
+  <%= link_to "Back to teacher registrations", teacher_registrations_path %>
+
+  <%= button_to "Destroy this teacher registration", @teacher_registration, method: :delete %>
+</div>
