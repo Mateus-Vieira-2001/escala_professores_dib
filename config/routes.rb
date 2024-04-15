@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :registrations
   resources :child_registrations
   resources :leaders_registrations
   resources :assistant_registrations

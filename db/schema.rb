@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_04_15_191112) do
+ActiveRecord::Schema[7.1].define(version: 2024_04_15_192634) do
   create_table "assistant_registrations", force: :cascade do |t|
     t.string "name"
     t.date "birthdate"
@@ -38,6 +38,14 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_15_191112) do
     t.boolean "is_teacher_too"
     t.boolean "is_assistant_too"
     t.string "class_by_age"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "registrations", force: :cascade do |t|
+    t.string "name"
+    t.string "type_volunteer"
+    t.date "birthdate"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
