@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_04_15_192634) do
+ActiveRecord::Schema[7.1].define(version: 2024_04_16_114223) do
   create_table "assistant_registrations", force: :cascade do |t|
     t.string "name"
     t.date "birthdate"
@@ -19,6 +19,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_15_192634) do
     t.string "disponibility"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "active"
   end
 
   create_table "child_registrations", force: :cascade do |t|
@@ -29,6 +30,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_15_192634) do
     t.string "observation"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "active"
   end
 
   create_table "leaders_registrations", force: :cascade do |t|
@@ -40,12 +42,25 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_15_192634) do
     t.string "class_by_age"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "active"
   end
 
   create_table "registrations", force: :cascade do |t|
     t.string "name"
     t.string "type_volunteer"
     t.date "birthdate"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "active"
+  end
+
+  create_table "schedules", force: :cascade do |t|
+    t.string "name_teacher"
+    t.string "name_assistant"
+    t.string "name_leader"
+    t.string "class_by_age"
+    t.date "data"
+    t.string "lesson"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -58,6 +73,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_15_192634) do
     t.string "class_by_age"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "active"
   end
 
 end
