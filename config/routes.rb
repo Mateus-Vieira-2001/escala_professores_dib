@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :lessons
+  resources :schedules
   resources :registrations
   resources :child_registrations
   resources :leaders_registrations
